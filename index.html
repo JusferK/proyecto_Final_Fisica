@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Justine Arriaga</title>
+</head>
+    <body>
+
+        <div class="welcomeScreen">
+            <h1>Mi proyecto de fisica</h1>
+
+            <h2>Menu</h2>
+            <button>Conversion de Medidas</button>
+            <button>Solucion de problemas fisicos</button>
+            <button>Informacion del estudiante</button>
+        </div>
+
+        <div id="seccion_Conversion_Longitud">
+
+            <div class="seccion_Longitud">
+                <label for="medida_longitud">Convertir de:</label>
+                <select name="medida_longitud" id="longitud_opciones">
+                    <option value="Metros">Metros</option>
+                    <option value="Kilometros">Kilometros</option>
+                    <option value="Millas">Millas</option>
+                    <option value="Pies">Pies</option>
+                    <option value="Centimetros">Centimetros</option>
+                    <option value="Pulgadas">Pulgadas</option>
+                </select>
+
+                <label for="medida_longitud_2">A: </label>
+                <select name="medida_longitud_2" id="longitud_opciones_2">
+                    <option value="Metros">Metros</option>
+                    <option value="Kilometros">Kilometros</option>
+                    <option value="Millas">Millas</option>
+                    <option value="Pies">Pies</option>
+                    <option value="Centimetros" selected="selected">Centimetros</option>
+                    <option value="Pulgadas">Pulgadas</option>
+                </select>
+
+                <div id="ingreso_de_datos_longitud">
+                    <input type="number" id="valor_longitud">
+                    <button id="btn_longitud_Calcular">Calcular</button>
+                </div>
+
+            </div>
+
+            <div id="seccion_Conversion_Masa">
+
+                <label for="medida_Masa">Convertir de:</label>
+                    <select name="medida_Masa" id="masa_opcion">
+                        <option value="Kilogramo">Kilogramo</option>
+                        <option value="Gramo">Gramo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Onzas">Onzas</option>
+                    </select>
+    
+                    <label for="medida_Masa_2">A:</label>
+                    <select name="medida_Masa_2" id="masa_opcion_2">
+                        <option value="Kilogramo">Kilogramo</option>
+                        <option value="Gramo">Gramo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Onzas">Onzas</option>
+                    </select>
+                    <div id="ingreso_de_datos_masa">
+                        <input type="number" id="valor_masa">
+                        <button id="btn_masa_Calcular">Calcular</button>
+                    </div>
+
+            </div>
+
+            <div id="seccion_Conversion_tiempo">
+                <label for="medida_tiempo">Convertir de:</label>
+                <select name="medida_tiempo" id="tiempo_opcion">
+                    <option value="Segundos">Segundos</option>
+                    <option value="Minutos">Minutos</option>
+                    <option value="Horas">Horas</option>
+                    <option value="Dias">Dias</option>
+                    <option value="Años">Años</option>
+                </select>
+
+                <label for="medida_tiempo_2">A:</label>
+                <select name="medida_tiempo_2" id="tiempo_opcion_2">
+                    <option value="Segundos">Segundos</option>
+                    <option value="Minutos">Minutos</option>
+                    <option value="Horas">Horas</option>
+                    <option value="Dias">Dias</option>
+                    <option value="Años">Años</option>
+                </select>
+
+                <div id="ingreso_de_datos_tiempo">
+                    <input type="number" id="valor_tiempo">
+                    <button id="btn_Tiempo_Calcular">Calcular</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="escoge_tu_problema_fisico">
+
+            <h2>Solucion de problemas fisicos</h2>
+
+            <div id="mru_mruv">
+                <h3>MRU & MRUV</h3>
+            </div>
+            <div id="newton">
+                <h3>1era y 3era ley de newton</h3>
+            </div>
+        </div>
+
+        <div id="informacion_del_estudiante">
+            <div id="formulario">
+
+                <label for="valor_nombre">Nombre completo</label>
+                <input type="text" id="valor_nombre">
+
+                <label for="valor_carne">Carné</label>
+                <input type="number" id="valor_carne">
+                <input type="number" id="valor_carne_2">
+                <input type="number" id="valor_carne_3">
+
+                <label for="valor_correlativo">Correlativo</label>
+                <input type="number" id="valor_correlativo">
+
+                <label for="valor_seccion">Seccion</label>
+                <input type="text" id="valor_seccion">
+
+                <label for="valor_curso">Curso</label>
+                <input type="text" id="valor_curso">
+
+                <label for="valor_catedratico">Catedratico</label>
+                <input type="text" id="valor_catedratico">
+            </div>
+        </div>
+
+        <script src="./js/conversores_de_medidas/conversor-medidas.js"></script>
+        <script src="./js/conversores_de_medidas/distancia/metodos-conversion-distancia.js"></script>
+        <script src="./js/conversores_de_medidas/masa/metodos-conversion-masa.js"></script>
+        <script src="./js/conversores_de_medidas/tiempo/metodos-conversion-tiempo.js"></script>
+        </html>
+    </body>
