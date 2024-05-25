@@ -1,111 +1,62 @@
-// segundos 
-const calcularSegundosAMinutos = segundos => {
-    return resultado = segundos / 60;
-};
+const calcularSegundosAMinutos = segundos => resultado = segundos / 60;
 
-const calcularSegundosAHoras = segundos => {
-    return resultado = segundos / 3600;
-};
+const calcularSegundosAHoras = segundos => resultado = segundos / 3600;
 
-const calcularSegundosADia = segundos => {
-    return resultado = segundos / 86400;
-};
+const calcularSegundosADia = segundos => resultado = segundos / 86400;
 
-const calcularSegundosAYear = segundos => {
-    return resultado = segundos / 3.154e+7;
-};
+const calcularSegundosAYear = segundos => resultado = segundos / 3.154e+7;
 
-// Minutos
+const calcularMinutosASegundos = minutos => resultado =  minutos * 60;
 
-const calcularMinutosASegundos = minutos => {
-    return resultado =  minutos * 60;
-};
+const calcularMinutosAHoras = minutos => resultado = minutos / 60;
 
-const calcularMinutosAHoras = minutos => {
-    return resultado = minutos / 60;
-};
+const calcularMinutosADia = minutos => resultado = minutos / 1440;
 
-const calcularMinutosADia = minutos => {
-    return resultado = minutos / 1440;
-};
+const calcularMinutosAYear = minutos => resultado = minutos / 525600;
 
-const calcularMinutosAYear = minutos => {
-    return resultado = minutos / 525600;
-};
+const calcularHoraASegundos = hora => resultado = hora * 3600;
 
-// Horas
+const calcularHorasAMinutos = horas => resultado = horas * 60;
 
-const calcularHoraASegundos = hora => {
-    return resultado = hora * 3600;
-}
+const calcularHorasADias = horas => resultado = horas / 24;
 
-const calcularHorasAMinutos = horas => {
-    return resultado = horas * 60;
-};
+const calcularHorasAYear = horas => resultado = horas / 8760;
 
-const calcularHorasADias = horas => {
-    return resultado = horas / 24;
-};
+const calcularDiasASegundos = dias => resultado = dias * 86400;
 
-const calcularHorasAYear = horas => {
-    return resultado = horas / 8760;
-};
+const calcularDiasAMinutos = dias => resultado = dias * 1440;
 
-// Dias
+const calcularDiasAHoras = dias => resultado = dias * 24;
 
-const calcularDiasASegundos = dias => {
-    return resultado = dias * 86400;
-};
+const calcularDiasAYear = dias => resultado = dias / 365;
 
-const calcularDiasAMinutos = dias => {
-    return resultado = dias * 1440;
-};
+const calcularYearASegundos = year => resultado = year * 3.154e+7;
 
-const calcularDiasAHoras = dias => {
-    return resultado = dias * 24;
-};
+const calcularYearAMinutos = year => resultado = year * 525600;
 
-const calcularDiasAYear = dias => {
-    return resultado = dias / 365;
-};
+const calcularYearAHoras = year => resultado = year * 8760;
 
-// Años
-
-const calcularYearASegundos = year => {
-    return resultado = year * 3.154e+7;
-};
-
-const calcularYearAMinutos = year => {
-    return resultado = year * 525600;
-};
-
-const calcularYearAHoras = year => {
-    return resultado = year * 8760;
-};
-
-const calcularYearADias = year => {
-    return resultado = year * 365;
-};
+const calcularYearADias = year => resultado = year * 365;
 
 let listaTiempoValores = [
-    {valor: 'Segundos a Minutos', metodo: calcularSegundosAMinutos},
-    {valor: 'Segundos a Horas', metodo: calcularSegundosAHoras},
-    {valor: 'Segundos a Dias', metodo: calcularSegundosADia},
-    {valor: 'Segundos a Años', metodo: calcularSegundosAYear},
-    {valor: 'Minutos a Segundos', metodo: calcularMinutosASegundos},
-    {valor: 'Minutos a Horas', metodo: calcularMinutosAHoras},
-    {valor: 'Minutos a Dias', metodo: calcularMinutosADia},
-    {valor: 'Minutos a Años', metodo: calcularMinutosAYear},
-    {valor: 'Horas a Segundos', metodo: calcularHoraASegundos},
-    {valor: 'Horas a Minutos', metodo: calcularHorasAMinutos},
-    {valor: 'Horas a Dias', metodo: calcularHorasADias},
-    {valor: 'Horas a Años', metodo: calcularHorasAYear},
-    {valor: 'Dias a Segundos', metodo: calcularDiasASegundos},
-    {valor: 'Dias a Minutos', metodo: calcularDiasAMinutos},
-    {valor: 'Dias a Horas', metodo: calcularDiasAHoras},
-    {valor: 'Dias a Años', metodo: calcularDiasAYear},
-    {valor: 'Años a Segundos', metodo: calcularYearASegundos},
-    {valor: 'Años a Minutos', metodo: calcularYearAMinutos},
-    {valor: 'Años a Horas', metodo: calcularYearAHoras},
-    {valor: 'Años a Dias', metodo: calcularYearADias}
+    {valor: 'Segundos a Minutos', metodo: calcularSegundosAMinutos, abreviatura: 'm'},
+    {valor: 'Segundos a Horas', metodo: calcularSegundosAHoras, abreviatura: 'h'},
+    {valor: 'Segundos a Dias', metodo: calcularSegundosADia, abreviatura: 'd'},
+    {valor: 'Segundos a Años', metodo: calcularSegundosAYear, abreviatura: 'a'},
+    {valor: 'Minutos a Segundos', metodo: calcularMinutosASegundos, abreviatura: 's'},
+    {valor: 'Minutos a Horas', metodo: calcularMinutosAHoras, abreviatura: 'h'},
+    {valor: 'Minutos a Dias', metodo: calcularMinutosADia, abreviatura: 'd'},
+    {valor: 'Minutos a Años', metodo: calcularMinutosAYear, abreviatura: 'a'},
+    {valor: 'Horas a Segundos', metodo: calcularHoraASegundos, abreviatura: 's'},
+    {valor: 'Horas a Minutos', metodo: calcularHorasAMinutos, abreviatura: 'm'},
+    {valor: 'Horas a Dias', metodo: calcularHorasADias, abreviatura: 'd'},
+    {valor: 'Horas a Años', metodo: calcularHorasAYear, abreviatura: 'a'},
+    {valor: 'Dias a Segundos', metodo: calcularDiasASegundos, abreviatura: 's'},
+    {valor: 'Dias a Minutos', metodo: calcularDiasAMinutos, abreviatura: 'm'},
+    {valor: 'Dias a Horas', metodo: calcularDiasAHoras, abreviatura: 'h'},
+    {valor: 'Dias a Años', metodo: calcularDiasAYear, abreviatura: 'a'},
+    {valor: 'Años a Segundos', metodo: calcularYearASegundos, abreviatura: 's'},
+    {valor: 'Años a Minutos', metodo: calcularYearAMinutos, abreviatura: 'm'},
+    {valor: 'Años a Horas', metodo: calcularYearAHoras, abreviatura: 'h'},
+    {valor: 'Años a Dias', metodo: calcularYearADias, abreviatura: 'd'}
 ];

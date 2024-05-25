@@ -1,0 +1,52 @@
+
+
+body {
+    background-image: url('../sources/background.png');
+}
+
+h1 {
+    text-align: center;
+    padding: 70px;
+    width: 25%;
+    backdrop-filter: blur(100px);
+    background-color:  rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 90px;
+}
+
+#encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#pantalla_bienvenida, #seccion_Conversiones, #escoge_tu_problema_fisico, #division_mru_y_mruv, #seccion_mru, #seccion_leyes_de_newton, #seccion_mruv, #informacion_del_estudiante {
+    backdrop-filter: blur(100px);
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#seccion_mruv {
+    backdrop-filter: blur(100px);
+    height: 900px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#pantalla_bienvenida button {
+    width: 600px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.seccion_Conversion_Longitud {
+    display: grid;
+}

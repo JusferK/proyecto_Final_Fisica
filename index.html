@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final - Justine Arriaga</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto Final - Justine Arriaga</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/script_interactividad.js" defer></script>
+    </head>
     <body>
-
-        <div class="welcomeScreen">
+        <div id="encabezado">
             <h1>Mi proyecto de fisica</h1>
-
-            <h2>Menu</h2>
-            <button>Conversion de Medidas</button>
-            <button>Solucion de problemas fisicos</button>
-            <button>Informacion del estudiante</button>
+        </div>
+        <div id="pantalla_bienvenida">
+            <button id="btn_menu_conversiones">Conversion de Medidas</button>
+            <button id="btn_menu_problemas_fisicos">Solucion de problemas fisicos</button>
+            <button id="btn_menu_info_estudiante">Informacion del estudiante</button>
         </div>
 
-        <div id="seccion_Conversion_Longitud">
+        <div id="seccion_Conversiones">
 
-            <div class="seccion_Longitud">
+            <div class="seccion_Conversion_Longitud">
                 <label for="medida_longitud">Convertir de:</label>
                 <select name="medida_longitud" id="longitud_opciones">
-                    <option value="Metros">Metros</option>
+                    <option value="Metros" selected>Metros</option>
                     <option value="Kilometros">Kilometros</option>
                     <option value="Millas">Millas</option>
                     <option value="Pies">Pies</option>
@@ -35,7 +36,7 @@
                     <option value="Kilometros">Kilometros</option>
                     <option value="Millas">Millas</option>
                     <option value="Pies">Pies</option>
-                    <option value="Centimetros" selected="selected">Centimetros</option>
+                    <option value="Centimetros" selected>Centimetros</option>
                     <option value="Pulgadas">Pulgadas</option>
                 </select>
 
@@ -43,6 +44,8 @@
                     <input type="number" id="valor_longitud">
                     <button id="btn_longitud_Calcular">Calcular</button>
                 </div>
+
+                <label id="respuesta_longitud"></label>
 
             </div>
 
@@ -67,7 +70,7 @@
                         <input type="number" id="valor_masa">
                         <button id="btn_masa_Calcular">Calcular</button>
                     </div>
-
+                    <label id="respuesta_masa"></label>
             </div>
 
             <div id="seccion_Conversion_tiempo">
@@ -93,12 +96,12 @@
                     <input type="number" id="valor_tiempo">
                     <button id="btn_Tiempo_Calcular">Calcular</button>
                 </div>
+
+                <label id="respuesta_tiempo"></label>
             </div>
         </div>
 
         <div id="escoge_tu_problema_fisico">
-
-            <h2>Solucion de problemas fisicos</h2>
 
             <div id="mru_mruv">
                 <h3>MRU & MRUV</h3>
@@ -108,34 +111,287 @@
             </div>
         </div>
 
-        <div id="informacion_del_estudiante">
-            <div id="formulario">
-
-                <label for="valor_nombre">Nombre completo</label>
-                <input type="text" id="valor_nombre">
-
-                <label for="valor_carne">Carné</label>
-                <input type="number" id="valor_carne">
-                <input type="number" id="valor_carne_2">
-                <input type="number" id="valor_carne_3">
-
-                <label for="valor_correlativo">Correlativo</label>
-                <input type="number" id="valor_correlativo">
-
-                <label for="valor_seccion">Seccion</label>
-                <input type="text" id="valor_seccion">
-
-                <label for="valor_curso">Curso</label>
-                <input type="text" id="valor_curso">
-
-                <label for="valor_catedratico">Catedratico</label>
-                <input type="text" id="valor_catedratico">
-            </div>
+        <div id="division_mru_y_mruv">
+            <h2 id="mru_seccion_def">MRU</h2>
+            <h2 id="mruv_seccion_def">MRUV</h2>
+            <button id="btn_un_paso_atras_3">atras</button>
         </div>
+
+        <div id="seccion_mru">
+            <h3>Que deseas obtener?</h3>
+
+            <label for="velocidad_checkbox">Velocidad</label>
+            <input type="checkbox" id="velocidad_checkbox">
+
+            <label for="tiempo_checkbox">Tiempo</label>
+            <input type="checkbox" id="tiempo_checkbox">
+
+            <label for="distancia_checkbox">Distancia</label>
+            <input type="checkbox" id="distancia_checkbox">
+
+            <div id="inputs_div_mru">
+
+                <div id="datos_mru_velocidad">
+                    <label for="magnitud_velocidad_valor">En que magnitud ingresas la velocidad?</label>
+                    <select name="magnitud_velocidad_valor" id="magnitud_velocidad_valor">
+                       <option value="m/s">m/s</option>
+                       <option value="k/h">km/h</option>
+                    </select>
+
+                    <label for="Velocidad_valor">Velocidad</label>
+                    <input type="number" id="Velocidad_valor">
+                </div>
+
+                <div id="datos_mru_distancia">
+                    <label for="magnitud_distancia_valor">En que magnitud ingresas la distancia?</label>
+                    <select name="magnitud_distancia_valor" id="magnitud_distancia_valor">
+                       <option value="m">metros</option>
+                       <option value="k">kilometros</option>
+                    </select>
+
+                    <label for="Distancia_valor">Distancia</label>
+                    <input type="number" id="Distancia_valor">
+                </div>
+                
+                <div id="datos_mru_tiempo">
+                    <label for="magnitud_tiempo_valor">En que magnitud ingresas el tiempo?</label>
+                    <select name="magnitud_tiempo_valor" id="magnitud_tiempo_valor">
+                       <option value="s">Segundos</option>
+                       <option value="h">Horas</option>
+                    </select>
+
+                    <label for="Tiempo_valor">Tiempo</label>
+                    <input type="number" id="Tiempo_valor">
+                </div>
+
+                <div id="respuesta_magnitudes_velocidad">
+                   <label for="metros_segundos">En que magnitud quieres la respuesta?</label>
+                    <select name="magnitud_respuesta" id="magnitud_respuesta_velocidad">
+                        <option value="m/s">m/s</option>
+                        <option value="k/h">km/h</option>
+                    </select>
+                </div>
+
+                <div id="respuesta_magnitudes_tiempo">
+                    <label for="metros_segundos">En que magnitud quieres la respuesta?</label>
+                    <select name="magnitud_respuesta" id="magnitud_respuesta_tiempo">
+                        <option value="s">segundos</option>
+                        <option value="h">horas</option>
+                    </select>
+                </div>
+                
+                <div id="respuesta_magnitudes_distancia">
+                    <label for="metros_segundos">En que magnitud quieres la respuesta?</label>
+                    <select name="magnitud_respuesta" id="magnitud_respuesta_distancia">
+                        <option value="m">metros</option>
+                        <option value="k">kilometros</option>
+                    </select>
+                </div>
+            </div>
+
+            <label id="respuesta_mru"></label>
+
+            <button id="solucion_mru_calculo">Calcular</button>
+            <button id="btn_un_paso_atras_4">atras</button>
+        </div>
+
+        <div id="seccion_mruv">
+            <h3>Que deseas obtener?</h3>
+
+            <label id="velocidad_inicial_label_MRUV">Velocidad inicial</label>
+            <br>
+
+            <label id="velocidad_final_label_MRUV">Velocidad final</label>
+            <br>
+
+            <label id="distancia_label_MRUV">Distancia</label>
+            <br>
+
+            <label id="tiempo_label_MRUV">Tiempo</label>
+            <br>
+
+            <label id="aceleracion_label_MRUV">Aceleracion</label>
+            <br>
+            <br>
+
+            <div id="inputs_div_mruv">
+                
+                <div id="datos_mruv_velocidad_inicial">
+                    <label for="magnitud_velocidad_inicial_valor_mruv">En que magnitud ingresas la velocidad inicial?</label>
+                    <select id="magnitud_velocidad_inicial_valor_mruv">
+                       <option value="m/s">m/s</option>
+                       <option value="k/h">km/h</option>
+                    </select>
+
+                    <label for="Velocidad_inicial_valor">Velocidad inicial</label>
+                    <input type="number" id="Velocidad_inicial_valor">
+                </div>
+
+                <div id="datos_mruv_velocidad_final">
+                    <label for="magnitud_velocidad_final_valor_mruv">En que magnitud ingresas la velocidad final?</label>
+                    <select id="magnitud_velocidad_final_valor_mruv">
+                       <option value="m/s">m/s</option>
+                       <option value="k/h">km/h</option>
+                    </select>
+
+                    <label for="Velocidad_final_valor">Velocidad final</label>
+                    <input type="number" id="Velocidad_final_valor">
+                </div>
+
+                <div id="datos_mruv_distancia">
+                    <label for="magnitud_distancia_mruv">En que magnitud ingresas la distancia?</label>
+                    <select id="magnitud_distancia_mruv">
+                       <option value="m">metros</option>
+                       <option value="k">kilometros</option>
+                    </select>
+
+                    <label for="distancia_valor_mruv">distancia</label>
+                    <input type="number" id="distancia_valor_mruv">
+                </div>
+
+                <div id="datos_mruv_tiempo">
+                    <label for="magnitud_tiempo_mruv">En que magnitud ingresas el tiempo?</label>
+                    <select id="magnitud_tiempo_mruv">
+                       <option value="s">segundos</option>
+                       <option value="h">horas</option>
+                    </select>
+
+                    <label for="tiempo_valor_mruv">tiempo</label>
+                    <input type="number" id="tiempo_valor_mruv">
+                </div>
+
+                <div id="datos_mruv_aceleracion">
+                    <label for="magnitud_aceleracion_mruv">En que magnitud ingresas la aceleracion?</label>
+                    <select id="magnitud_aceleracion_mruv">
+                       <option value="m/s">m/s²</option>
+                       <option value="k/h">k/h²</option>
+                    </select>
+
+                    <label for="aceleracion_valor_mruv">aceleracion</label>
+                    <input type="number" id="aceleracion_valor_mruv">
+                </div>
+
+                <div id="respuesta_magnitudes_vo_mruv">
+                    <label for="magnitud_respuesta_velocidad_inicial">En que magnitud quieres la respuesta de velocidad inicial?</label>
+                    <select id="magnitud_respuesta_velocidad_inicial">
+                        <option value="m/s">m/s</option>
+                        <option value="k/h">k/h</option>
+                    </select>
+                </div>
+
+                <div id="respuesta_magnitudes_vf_mruv">
+                    <label for="magnitud_respuesta_velocidad_final">En que magnitud quieres la respuesta de velocidad final?</label>
+                    <select id="magnitud_respuesta_velocidad_final">
+                        <option value="m/s">m/s</option>
+                        <option value="k/h">k/h</option>
+                    </select>
+                </div>
+
+                <div id="respuesta_magnitudes_distancia_mruv">
+                    <label for="magnitud_respuesta_distancia_mruv">En que magnitud quieres la respuesta de distancia?</label>
+                    <select id="magnitud_respuesta_distancia_mruv">
+                        <option value="m">metros</option>
+                        <option value="k">kilometros</option>
+                    </select>
+                </div>
+
+                <div id="respuesta_magnitudes_tiempo_mruv">
+                    <label for="magnitud_respuesta_tiempo_mruv">En que magnitud quieres la respuesta de tiempo?</label>
+                    <select id="magnitud_respuesta_tiempo_mruv">
+                        <option value="s">segundos</option>
+                        <option value="h">horas</option>
+                    </select>
+                </div>
+
+                <div id="respuesta_magnitudes_aceleracion">
+                    <label for="magnitud_respuesta_aceleracion">En que magnitud quieres la respuesta de aceleracion?</label>
+                    <select id="magnitud_respuesta_aceleracion">
+                        <option value="m/s">m/s²</option>
+                        <option value="k/h">k/h²</option>
+                    </select>
+                </div>
+
+                <label id="respuesta_1_mruv"></label>
+                <label id="respuesta_2_mruv"></label>
+
+            </div>
+            <button id="btn_un_paso_atras_1">atras</button>
+            <button id="solucion_mruv_calculo">Calcular</button>
+        </div>
+
+        <div id="seccion_leyes_de_newton">
+            <h3>Leyes de newton</h3>
+            <br>
+            <label for="magnitud_respuesta_primera_ley_newton">Que desea obtener?</label>
+            <select name="" id="magnitud_respuesta_primera_ley_newton">
+                <option value="Masa">Masa</option>
+                <option value="Peso">Peso</option>
+                <option value="Coeficiente de friccion cinetica">Coeficiente de friccion cinetica</option>
+                <option value="Coeficiente de friccion estatica">Coeficiente de friccion estatica</option>
+                <option value="Normal">Normal</option>
+                <option value="El objeto esta en reposo o no">El objeto esta en reposo o no</option>
+                <option value="Friccion estatica">Friccion estatica</option>
+                <option value="Friccion cinetica">Friccion cinetica</option>
+                <option value="Fuerza aplicada">Fuerza aplicada</option>
+            </select>
+            <br>
+            <label for="masa_newton">Masa</label>
+            <input type="number" id="masa_newton">
+            <br>
+            <label for="cantidad_de_fuerzas">Cuantas fuerzas hay?</label>
+            <input type="number" id="cantidad_de_fuerzas">
+            <div id="contenedor_fuerzas">
+
+            </div>
+            <br>
+            <label for="coeficiente_newton">Coeficiente de friccion</label>
+            <input type="number" id="coeficiente_newton">
+            <label for="tipo_de_coeficiente">Qué tipo de coeficiente es?</label>
+            <select id="tipo_de_coeficiente">
+                <option value="cinetica">cinetica</option>
+                <option value="estatica">estatica</option>
+            </select>
+            <br>
+            <label for="angulo_newton">Angulo</label>
+            <input type="number" id="angulo_newton">
+            <label for="angulo_posicion">Respecto a:</label>
+            <select id="posicion_ejes">
+                <option value="x positivo">eje x+</option>
+                <option value="x negativo">eje x-</option>
+                <option value="y positivo">eje y+</option>
+                <option value="y negativo">eje y-</option>
+            </select>
+            <br>
+
+            <label id="respuesta_newton"></label>
+
+            <button id="btn_calcular_primera_ley">Calcular</button>
+            <button id="btn_un_paso_atras_5">atras</button>
+        </div>
+
+        <div id="informacion_del_estudiante">
+            <label>Nombre:</label>
+            <label>Justine Fernnando Arriaga Marroquin</label>
+            <label>Carne</label>
+            <label>3190-22-21898</label>
+            <label>Correlativo</label>
+            <label>8</label>
+            <label>Seccion</label>
+            <label>A</label>
+            <label>Catedratico</label>
+            <label>Ing. Allan Villatoro</label>
+        </div>
+        <button id="menu_principal">atras</button>
 
         <script src="./js/conversores_de_medidas/conversor-medidas.js"></script>
         <script src="./js/conversores_de_medidas/distancia/metodos-conversion-distancia.js"></script>
         <script src="./js/conversores_de_medidas/masa/metodos-conversion-masa.js"></script>
         <script src="./js/conversores_de_medidas/tiempo/metodos-conversion-tiempo.js"></script>
-        </html>
+        <script src="./js/solucion_de_problemas_fisicos/mru_y_mruv/mru_solucion.js"></script>
+        <script src="./js/solucion_de_problemas_fisicos/mru_y_mruv/mruv_solucion.js"></script>
+        <script src="./js/solucion_de_problemas_fisicos/mru_y_mruv/mruv_solucion_tipos_de_problema.js"></script>
+        <script src="./js/solucion_de_problemas_fisicos/leyes_de_newton/primera_ley_de_newton.js"></script>
+        <script src="./js/solucion_de_problemas_fisicos/leyes_de_newton/escenarios_primera_y_tercera_ley_newton.js"></script>
+        
     </body>
+</html>

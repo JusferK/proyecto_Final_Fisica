@@ -1,58 +1,26 @@
-// Kilogramo
+const calcularKilogramoAGramo = kilogramo => resultado = kilogramo * 1000;
 
-const calcularKilogramoAGramo = kilogramo => {
-    return resultado = kilogramo * 1000;
-};
+const calcularKilogramoALibra = kilogramo => resultado = kilogramo * 2.205;
 
-const calcularKilogramoALibra = kilogramo => {
-    return resultado = kilogramo * 2.205;
-};
+const calcularKilogramoAOnzas = kilogramo => resultado = kilogramo * 35.274;
 
-const calcularKilogramoAOnzas = kilogramo => {
-    return resultado = kilogramo * 35.274;
-};
+const calcularGramoAKilogramo = gramo => resultado = gramo / 1000;
 
-// Gramo
+const calcularGramoALibra = gramo => resultado = gramo / 453.6;
 
-const calcularGramoAKilogramo = gramo => {
-    return resultado = gramo / 1000;
-};
+const calcularGramoAOnzas = gramo => resultado = gramo / 28.35;
 
-const calcularGramoALibra = gramo => {
-    return resultado = gramo / 453.6;
-};
+const calcularLibraAKilogramo = libra => resultado = libra / 2.205;
 
-const calcularGramoAOnzas = gramo => {
-    return resultado = gramo / 28.35;
-};
+const calcularLibraAGramo = libra => resultado = libra * 453.6;
 
-// Libra
+const calcularLibraAOnza = libra => resultado = libra * 16;
 
-const calcularLibraAKilogramo = libra => {
-    return resultado = libra / 2.205;
-};
+const calcularOnzaAKilogramo = onza => resultado = onza / 35.274;
 
-const calcularLibraAGramo = libra => {
-    return resultado = libra * 453.6;
-};
+const calcularOnzaAGramo = onza => resultado = onza * 28.3495;
 
-const calcularLibraAOnza = libra => {
-    return resultado = libra * 16;
-};
-
-// Onza
-
-const calcularOnzaAKilogramo = onza => {
-    return resultado = onza / 35.274;
-};
-
-const calcularOnzaAGramo = onza => {
-    return resultado = onza * 28.3495;
-};
-
-const calcularOnzasALibra = onza => {
-    return resultado = onza / 16;
-};
+const calcularOnzasALibra = onza => resultado = onza / 16;
 
 let listaMasaValores = [
     {valor: 'Kilogramo a Gramo', metodo: calcularKilogramoAGramo, abreviatura: 'g'},

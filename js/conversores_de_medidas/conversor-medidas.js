@@ -21,8 +21,8 @@ botonCalcularLongitud.addEventListener('click', () => {
     if(valorInput1 !== '') {
         for(const objeto of listaLongitudValores) {
             if(longitudUnido == objeto.valor) {
-                let conversionHecha = objeto.metodo(valorInput1);
-                console.log(conversionHecha);
+                let conversionHecha = objeto.metodo(valorInput1) + ' ' + objeto.abreviatura;
+                document.getElementById('respuesta_longitud').innerHTML = conversionHecha;
             }
         }
     } else {
@@ -41,8 +41,8 @@ botonCalcularMasa.addEventListener('click', () => {
     if(valorInput1 !== '') {
         for(const objeto of listaMasaValores) {
             if(masaUnido == objeto.valor) {
-                let conversionHecha = objeto.metodo(valorInput1);
-                console.log(conversionHecha);
+                let conversionHecha = objeto.metodo(valorInput1) + ' ' + objeto.abreviatura;
+                document.getElementById('respuesta_masa').innerHTML = conversionHecha;
             }
         }
     } else {
@@ -61,8 +61,8 @@ botonTiempoDos.addEventListener('click', () => {
     if(valorInput1 !== '') {
         for(const objeto of listaTiempoValores) {
             if(tiempoUnido == objeto.valor) {
-                let conversionHecha = objeto.metodo(valorInput1);
-                console.log(conversionHecha);
+                let conversionHecha = objeto.metodo(valorInput1) + ' ' + objeto.abreviatura;
+                document.getElementById('respuesta_tiempo').innerHTML = conversionHecha;
             }
         }
     } else {
